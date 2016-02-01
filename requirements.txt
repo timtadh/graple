@@ -1,0 +1,5 @@
+argparse
+sh
+numpy
+scipy
+-e git+git@github.com:scikit-umfpack/scikit-umfpack.git#egg=scikit-umfpack

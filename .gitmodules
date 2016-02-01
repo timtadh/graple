@@ -1,0 +1,12 @@
+[submodule "src/github.com/timtadh/goiso"]
+	path = src/github.com/timtadh/goiso
+	url = git@github.com:timtadh/goiso
+[submodule "src/github.com/timtadh/getopt"]
+	path = src/github.com/timtadh/getopt
+	url = git@github.com:timtadh/getopt
+[submodule "src/github.com/timtadh/data-structures"]
+	path = src/github.com/timtadh/data-structures
+	url = git@github.com:timtadh/data-structures
+[submodule "src/github.com/timtadh/fs2"]
+	path = src/github.com/timtadh/fs2
+	url = git@github.com:timtadh/fs2.git
