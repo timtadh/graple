@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+DIR=$1
+
+if [ -d $DIR ]; then
+	echo $DIR
+else
+	echo "you must supply a directory"
+	exit 1
+fi
+
+if ! which selection_probability &> /dev/null; then
+	echo "selection_probability program not found"
+	exit 1
+fi
+
+PATHS=$(
+	(
+	for path in $(find $DIR -name "matrices.json"); do
+		echo $(basename $(dirname $path)) $path
+	done
+	) | sort -n -t " " -k1,1 | cut -d " " -f 2
+)
+
+for path in $PATHS; do
+	cmd="selection_probability -m $path -o $(dirname $path)/pattern.pr"
+	echo $cmd
+	$cmd
+done
+
