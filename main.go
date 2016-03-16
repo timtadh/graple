@@ -290,6 +290,7 @@ func main() {
 	cpuProfile := ""
 	outputDir := ""
 	cache := ""
+	compute_prs := false
 	for _, oa := range optargs {
 		switch oa.Opt() {
 		case "-h", "--help":
@@ -302,6 +303,8 @@ func main() {
 			minVertices = ParseInt(oa.Arg())
 		case "-c", "--cache":
 			cache = AssertDir(oa.Arg())
+		case "--probabilities":
+			compute_prs = true
 		case "--sample-size":
 			sampleSize = ParseInt(oa.Arg())
 		case "--mem-profile":
@@ -470,6 +473,11 @@ func main() {
 			close(keyCh)
 		}()
 		writeMaximalPatterns(keyCh, m.AllEmbeddings, nodeAttrs, outputDir)
+	}
+
+	if !compute_prs {
+		log.Println("Done!")
+		return
 	}
 
 	log.Println("Finished writing patterns. Computing probabilities...")
