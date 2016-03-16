@@ -14,7 +14,7 @@ Collect a sample of frequent subgraphs:
              -c /tmp/cache \
              --support=5 \
              --sample-size=10 \
-             --min-vertices=8
+             --min-vertices=8 \
              --probabilities \
              ./data/expr.gz
     2016/03/15 21:29:52 Number of goroutines = 2
