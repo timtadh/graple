@@ -39,6 +39,23 @@ Compute the selection probabilities using SuiteSparse
     cowardly refusing to overwrite output
 
 
+## Example Data
+
+The example data was computed from <https://github.com/hacsoc/expr> which is a
+simple arithmetic expression calculator. It was computed using
+<https://github.com/timtadh/jpdg>. Command used (on Ubuntu 14.04) replace
+`<path>`s with the appropriate directories.
+
+```
+java -Xmx6g \
+    -jar <path>/jpdg/target/jpdg-git-master.jar \
+    -b <path>/expr/build/classes/main \
+    -l op \
+    -o /tmp/expr-pdg.veg \
+    -c <path>/expr/build/classes/main:/usr/lib/jvm/java-7-openjdk-amd64/lib/jconsole.jar:/usr/lib/jvm/java-7-openjdk-amd64/lib/tools.jar:/usr/lib/jvm/java-7-openjdk-amd64/lib/dt.jar:/usr/lib/jvm/java-7-openjdk-amd64/lib/sa-jdi.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/security/local_policy.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/security/US_export_policy.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/compilefontconfig.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/zipfs.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/icedtea-sound.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/localedata.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/sunjce_provider.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/java-atk-wrapper.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/sunpkcs11.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/dnsns.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/management-agent.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rhino.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/javazic.jar:
+```
+
+
 ## Usage
 
 ```
