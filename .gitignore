@@ -9,7 +9,6 @@ env
 !bin/conditionals
 *.g
 *.png
-data
 cpuprof
 memprof
 *.out
