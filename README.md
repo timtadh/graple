@@ -12,7 +12,7 @@ Collect a sample of frequent subgraphs:
 
     $ graple -o /tmp/output \
              -c /tmp/cache \
-             --support=5 \
+             --support=4 \
              --sample-size=10 \
              --min-vertices=8 \
              --probabilities \
@@ -96,7 +96,7 @@ Syntax
 Example
 
     $ graple -o /tmp/output -c /tmp/cache \
-             --support=5 --sample-size=10 $HOME/data/expr.gz
+             --support=4 --sample-size=10 $HOME/data/expr.gz
 
 Options
     -h, --help                  view this message
